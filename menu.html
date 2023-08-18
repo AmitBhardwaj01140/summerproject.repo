@@ -7,53 +7,68 @@
     <title>Menu</title>
 </head>
 <body>
+	<video id="camera" autoplay></video>
+
+
     <div id="container">
         <div class="m">Menu Driven WebApp</div>
-        <form action="http://3.108.228.1/cgi-bin/date.py">
+        <form action="http://15.206.173.164/cgi-bin/date.py">
             <button type="submit">1. DATE</button>
         </form>
-        <form action="http://3.108.228.1/cgi-bin/cal.py">
+        <form action="http://15.206.173.164/cgi-bin/cal.py">
             <button type="submit">2. CAL</button>
         </form>
-        <form action="http://3.108.228.1/cgi-bin/ip.py">
+        <form action="http://15.206.173.164/cgi-bin/ip.py">
             <button type="submit">3. Get the IP..</button>
         </form>
-        <form action="http://3.108.228.1/cgi-bin/mail.py">
+        <form action="http://15.206.173.164/cgi-bin/mail.py">
             <label for="email">4. Enter the mail to which you want to send the message:</label>
             <input type="email" id="email" name="a" required><br>
             <label for="message">Enter the message:</label>
             <input type="text" id="message" name="b" required><br>
             <button type="submit">Send it..</button>
         </form>
-        <form action="http://3.108.228.1/cgi-bin/ec.py">
+        <form action="http://15.206.173.164/cgi-bin/ec.py">
             <button type="submit">5. Want to launch an EC2 instance?</button>
         </form>
-        <form action="http://3.108.228.1/cgi-bin/number.py">
+        <form action="http://15.206.173.164/cgi-bin/number1.py">
             <button type="submit">6. Get to know the number of instances?</button>
         </form>
-        <form action="http://3.108.228.1/cgi-bin/bucket.py">
+        <form action="http://15.206.173.164/cgi-bin/bucket.py">
             <label for="bucketName">7. Want to create a S3 bucket?<br>
             Enter the Bucket name:</label>
             <input type="text" id="bucketName" name="c" required><br>
             <button type="submit">Create</button>
         </form>
-        <form action="http://3.108.228.1/cgi-bin/upload.py">
-            <label for="bucketName">8. Want to upload an object to S3 bucket?<br>
-            Enter the Bucket name:</label>
-            <input type="text" id="bucketName" name="d" required><br>
-            <label for="objectPath">Enter the Path of the object:</label>
-            <input type="text" id="objectPath" name="e" required><br>
-            <label for="objectName">Enter the object name:</label>
-            <input type="text" id="objectName" name="f" required><br>
-            <button type="submit">Upload</button>
-        </form>
-        <form action="http://3.108.228.1/cgi-bin/whatsapp.py">
+	 <form action="http://15.206.173.164/cgi-bin/upload2.py" method="post" enctype="multipart/form-data">
+		 7. Upload a file to s3 bucket <input type="file" name="fileToUpload" id="fileToUpload"><br>
+		            Enter the Bucket name: <input type="text" id="bucketName" name="c" required><br>
+                                               <input type="submit" value="Upload" name="submit">
+         </form>
+         <form action="http://15.206.173.164/cgi-bin/whatsapp.py">
             <label for="whatsappMessage">9. Send the message to WhatsApp.<br>
             Enter the message:</label>
             <input type="text" id="whatsappMessage" name="q" required>
 	    <br>
             <button type="submit">Send</button>
         </form>
+
     </div>
+      <script>
+        // Get access to the camera
+        async function getCameraStream() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                const videoElement = document.getElementById("camera");
+                videoElement.srcObject = stream;
+            } catch (error) {
+                console.error("Error accessing camera:", error);
+            }
+        }
+
+        // Call the function to get the camera stream
+        getCameraStream();
+    </script>
+
 </body>
 </html>
