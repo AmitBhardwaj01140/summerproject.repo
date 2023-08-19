@@ -7,9 +7,6 @@
     <title>Menu</title>
 </head>
 <body>
-	<video id="camera" autoplay></video>
-
-
     <div id="container">
         <div class="m">Menu Driven WebApp</div>
         <form action="http://15.206.173.164/cgi-bin/date.py">
@@ -22,12 +19,12 @@
             <button type="submit">3. Get the IP..</button>
         </form>
         <form action="http://15.206.173.164/cgi-bin/mail.py">
-            <label for="email">4. Enter the mail to which you want to send the message:</label>
+		<label for="email"><b>4. Enter the mail to which you want to send the message:</b></label>
             <input type="email" id="email" name="a" required><br>
             <label for="message">Enter the message:</label>
             <input type="text" id="message" name="b" required><br>
-            <button type="submit">Send it..</button>
-        </form>
+             <input type="submit" value="Send" name="submit">
+	</form>
         <form action="http://15.206.173.164/cgi-bin/ec.py">
             <button type="submit">5. Want to launch an EC2 instance?</button>
         </form>
@@ -35,40 +32,41 @@
             <button type="submit">6. Get to know the number of instances?</button>
         </form>
         <form action="http://15.206.173.164/cgi-bin/bucket.py">
-            <label for="bucketName">7. Want to create a S3 bucket?<br>
+		<label for="bucketName"><b>7. Want to create a S3 bucket?</b><br>
             Enter the Bucket name:</label>
             <input type="text" id="bucketName" name="c" required><br>
-            <button type="submit">Create</button>
+            <input type="submit" value="Create" name="submit">
         </form>
 	 <form action="http://15.206.173.164/cgi-bin/upload2.py" method="post" enctype="multipart/form-data">
-		 7. Upload a file to s3 bucket <input type="file" name="fileToUpload" id="fileToUpload"><br>
-		            Enter the Bucket name: <input type="text" id="bucketName" name="c" required><br>
+		 <b>8. Upload a file to s3 bucket</b> <input type="file" name="fileToUpload" id="fileToUpload"><br>
+		 <b> Enter the Bucket name:</b> <input type="text" id="bucketName" name="c" required><br>
                                                <input type="submit" value="Upload" name="submit">
          </form>
          <form action="http://15.206.173.164/cgi-bin/whatsapp.py">
-            <label for="whatsappMessage">9. Send the message to WhatsApp.<br>
+		 <label for="whatsappMessage"><b>9. Send the message to WhatsApp.</b><br>
             Enter the message:</label>
             <input type="text" id="whatsappMessage" name="q" required>
 	    <br>
-            <button type="submit">Send</button>
+             <input type="submit" value="Send" name="submit">
+	 </form>
+	<form action="http://15.206.173.164/ajax.html">
+		<button type="submit"><b>10. Live Linux Compiler</button><br>
         </form>
+	<form action="http://15.206.173.164/docker.html">
+		<button type="submit"><b>11.Get Your Docker Status</button><br><br>
+        </form>
+	<form action="http://13.234.117.134/cgi-bin/wiki.py">
+                <label for="wiki"><b>12. Use Our LLM Model Integrated With Langchain That Answers questions from wikipedia. </b><br>
+		 Enter the Prompt:</label>
+                           <input type="text" id="prompt" name="c" required>
+            <br>
+                   <input type="submit" value="Send" name="submit">
+	</form>
+	<form action="http://15.206.173.164/cgi-bin/web.html" method="POST" enctype="multipart/form-data">
+                 <b>13. Configure your webserver...... </b> <input type="file" name="fileToUpload" id="fileToUpload"><br>
+                      <input type="submit" value="Upload" name="submit">
+         </form>
 
     </div>
-      <script>
-        // Get access to the camera
-        async function getCameraStream() {
-            try {
-                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-                const videoElement = document.getElementById("camera");
-                videoElement.srcObject = stream;
-            } catch (error) {
-                console.error("Error accessing camera:", error);
-            }
-        }
-
-        // Call the function to get the camera stream
-        getCameraStream();
-    </script>
-
 </body>
 </html>
