@@ -10,7 +10,7 @@ form = cgi.FieldStorage()
 
 # Use the "file" attribute to get the uploaded file object
 myfilename = form["filecontent"]
-
+port= form['c'].value
 print("Content-type: text/html")
 print()
 
@@ -32,11 +32,12 @@ p=n.split(".")
 k=p[0]
 print(k)
 l=str(k)
+zz=str(port)
 build_command = ["sudo", "docker", "build", "-t", "{}:v1".format(l), "myupload/"]
 
 result1 = sp.run(build_command, capture_output=True, text=True)
 
-run_command = ["sudo", "docker", "run", "-dit", "-p", "8088:80", "{}:v1".format(l)]
+run_command = ["sudo", "docker", "run", "-dit", "-p", "{}:80".format(zz), "{}:v1".format(l)]
 
 result = sp.run(run_command, capture_output=True, text=True)
 
