@@ -20,7 +20,7 @@ form = cgi.FieldStorage()
 data=form.getvalue("c")
 def run(data):
  wikipedia = WikipediaAPIWrapper()
- myapikey= openai.api_key="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"
+ myapikey= openai.api_key="your_openai_key"
  myllm = OpenAI(
     model= ('text-davinci-003'),
     temperature=1,
@@ -47,9 +47,6 @@ op=run(data)
 print(op)
 print()
 print()
-print("<form action= http://15.206.173.164/menu.html>")
+print("<form action= HTTP://'your_ip'/menu.html>")
 print("<input type='submit' vaue='Back to Main menu'></form>")
 
-
-#if __name__== "__main__":
-#  run()
