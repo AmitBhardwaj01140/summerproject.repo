@@ -11,14 +11,14 @@ data2=form.getvalue("q")
 from twilio.rest import Client
 
 # Replace these with your actual Account SID and Auth Token from Twilio
-account_sid = "AC6bf3d2f180b0985001d9f8ac5d65d987"
-auth_token = "d0dd285c58c3a5b4de8e604519c595fc"
+account_sid = ""
+auth_token = ""
 
 # Replace this with your Twilio WhatsApp sandbox number
-twilio_whatsapp_number = "+14155238886"
+twilio_whatsapp_number = "+"
 
 # Replace this with the recipient's WhatsApp number with the country code
-recipient_whatsapp_number ="+918824510564" 
+recipient_whatsapp_number ="" 
 
 # Create a Twilio client
 client = Client(account_sid, auth_token)
