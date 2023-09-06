@@ -40,11 +40,7 @@ result1 = sp.run(build_command, capture_output=True, text=True)
 run_command = ["sudo", "docker", "run", "-dit", "-p", "{}:80".format(zz), "{}:v1".format(l)]
 
 result = sp.run(run_command, capture_output=True, text=True)
-
-#out1=sp.getoutput("docker build -t {}:v1 myupload/".format(name))
-#out2=sp.getoutput("docker run -dit -p 8085:80 {}:v1".format(name))
-
 #print()
 #print()
-#print("<form action= http://13.234.117.134/cgi-bin/web2.py")
+#print("<form action= HTTP://'your_ip'/cgi-bin/web2.py")
 #print("<input type='submit' value='Back'></form>")
