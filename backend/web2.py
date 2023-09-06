@@ -46,5 +46,5 @@ result = sp.run(run_command, capture_output=True, text=True)
 
 #print()
 #print()
-#print("<form action= http://13.234.117.134/cgi-bin/web2.py")
+#print("<form action= HTTP://'your_ip'/cgi-bin/web2.py")
 #print("<input type='submit' value='Back'></form>")
