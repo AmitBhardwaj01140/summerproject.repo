@@ -26,7 +26,7 @@ except Exception as e:
 
 print()
 print()
-print("<form action= http://3.108.228.1/menu.html>")
+print("<form action= HTTP://'your_ip'/menu.html>")
 print("<input type='submit' value='Back to Main menu'></form>")
 
 
