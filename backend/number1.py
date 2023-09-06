@@ -11,5 +11,5 @@ print("Total No. Instances are: {}".format(output))
 
 print()
 print()
-print("<form action= http://15.206.173.164/menu.html>")
+print("<form action= HTTP://'your_ip'/menu.html>")
 print("<input type='submit' value='Back to Main menu'></form>")
