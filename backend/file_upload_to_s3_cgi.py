@@ -4,7 +4,7 @@ import os
 import boto3
 from botocore.exceptions import NoCredentialsError
 
-S3_BUCKET_NAME = 'testbucketfotteamtask'
+S3_BUCKET_NAME = 'Bucket_name'
 
 # Directory to store uploaded files temporarily
 UPLOAD_DIR = '/tmp/upload/'
