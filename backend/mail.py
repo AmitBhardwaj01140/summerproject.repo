@@ -9,17 +9,9 @@ form = cgi.FieldStorage()
 data1=form.getvalue("a")
 
 data2=form.getvalue("b")
-
-#myname="vimal"
-#print("i am {} ".format(myname))
-
-
-
 import smtplib
-
-
-sender_email = "rrsahani21@gmail.com"
-sender_password = "uvhzbahtuixlnokf"
+sender_email = "senders_mail"
+sender_password = "senders_password"
 recipient_email = data1
 subject = "Test Email from Python" 
 body = data2
@@ -38,5 +30,5 @@ except Exception as e:
 
 print()
 print()
-print("<form action= http://3.108.228.1/menu.html>")
+print("<form action= HTTP://'your_ip'/menu.html>")
 print("<input type='submit' value='Back to Main menu'></form>")
