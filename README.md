@@ -1,9 +1,3 @@
-Creating an attractive and informative README file is crucial for showcasing your project on GitHub. Here's a suggested project name and a template for your README file:
-
-**Project Name:** Interactive Web Application with LangChain Integration
-
-**README Template:**
-
 # Interactive Web Application with LangChain Integration
 
 Welcome to the Interactive Web Application with LangChain Integration! This project is a dynamic web application that combines frontend technologies with powerful backend Python scripts and LangChain integration to deliver a range of functionalities.
