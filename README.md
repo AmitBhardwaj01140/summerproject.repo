@@ -26,6 +26,18 @@ Our project leverages LangChain, an open-source framework, to supercharge our we
 - **Data Responsiveness:** It connects our app to data sources, ensuring more comprehensive and relevant interactions.
 - **Intelligent Decisions:** LangChain empowers our app to make smart decisions and adapt to user needs.
 
+## Configure Your Web Server
+
+Our application offers a powerful feature that enables you to configure your web server effortlessly. Here's how it works:
+
+- **File Upload:** Use the file upload functionality to provide the configuration you want for your web server. Whether it's website content, server settings, or any other file, simply upload it.
+
+- **Custom Port:** You have the flexibility to specify a custom port for your web server, ensuring it operates exactly as you intend.
+
+- **Docker Integration:** Behind the scenes, our application leverages Docker to create a containerized environment based on your uploaded configuration. This allows for seamless management and isolation of your web server.
+
+With this functionality, you can quickly and easily set up, customize, and deploy web server configurations, all within the same user-friendly interface.
+
 ## Getting Started
 
 To get started with this project, follow these steps:
