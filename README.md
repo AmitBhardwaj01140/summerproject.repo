@@ -67,14 +67,3 @@ This project relies on the following technologies and frameworks:
 
 Please ensure that you have these dependencies installed and configured before running the application.
 
-
-## Contact
-
-If you have any questions or feedback, feel free to reach out to us:
-
-- Email: KRISHABH080@gmail.com
-
-
-Thank you for checking out our project, and we hope you find it useful and inspiring for your own web development and integration endeavors.
-
-**Happy Coding!**
